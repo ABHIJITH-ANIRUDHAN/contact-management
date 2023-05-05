@@ -1,0 +1,114 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-success"><i class="fa-solid fa-user"></i>Add New Contact Page</h1>
+            <p class="mt-4" style="text-align:justify">Lorem ipsum dolor sit. Odio vrror velit qui culpa reiciendis nostrum vitae consequatur eum ea. Perferendis, veritatis facilis sint minima esse atque dicta minus cupiditate veniam.</p>
+        </div>
+    </div>
+</div>
+<pre>
+  {{contact|json}}
+</pre>
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-lg-8">
+      <form class="border p-3 rounded mb-5">
+        <div class="mb-2">
+        <input type="text" name="id" [(ngModel)]="contact.id" placeholder="Contact ID" class="form-control">
+      </div>
+      <div class="mb-2">
+        <input type="text" name="name" [(ngModel)]="contact.name" placeholder="Contact Name" class="form-control">
+      </div>
+      <div class="mb-2">
+        <input type="text" name="photo" [(ngModel)]="contact.photo" placeholder="Contact Image" class="form-control">
+      </div>
+      <div class="mb-2">
+        <input type="text" name="email" [(ngModel)]="contact.email" placeholder="Contact Email ID" class="form-control">
+      </div>
+      <div class="mb-2">
+        <input type="text" name="mobile" [(ngModel)]="contact.mobile" placeholder="Contact Mobile" class="form-control">
+      </div>
+      <div class="mb-2">
+        <input type="text" name="company" [(ngModel)]="contact.company" placeholder="Contact Company Name" class="form-control">
+      </div>
+      <div class="mb-2">
+        <input type="text" name="title" [(ngModel)]="contact.title" placeholder="Title" class="form-control">
+      </div>
+      <div class="mb-2">
+        <select name="groupId" id="" [(ngModel)]="contact.groupId" class="form-control">
+          <option selected disabled hidden>{{contact.groupId}}</option>
+          <option [value]="group.id" *ngFor="let group of allGroups">{{group.name}}</option>
+        </select>
+      </div>
+      <div class="mb-2">
+        <input (click)="addContact()" type="button" value="Create" class="btn btn-success">
+        <a routerLink="" class="btn btn-warning ms-3">Close</a>
+      </div>
+      </form>
+    </div>
+    <div class="col-lg-4 mt-5">
+      <img height="130px" [src]="contact.photo" alt="image">
+    </div>
+  </div>
+</div>
+<!--<div class="container mt-2">
+    <div class="row">
+      <div class="col-lg-8">
+        <form class="border p-3 rounded mb-5">
+          <div class="mb-2">
+            <input
+              type="text"
+              placeholder="Contact ID"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-2">
+            <input type="text" placeholder="Contact Name" class="form-control" />
+          </div>
+          <div class="mb-2">
+            <input type="text" placeholder="Contact Image" class="form-control" />
+          </div>
+          <div class="mb-2">
+            <input
+              type="text"
+              placeholder="Contact Email ID"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-2">
+            <input
+              type="text"
+              placeholder="Contact Mobile"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-2">
+            <input
+              type="text"
+              placeholder="Contact Company Name"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-2">
+            <select name="" id="" class="form-control">
+              <option selected hidden disabled>Select A group</option>
+              <option value="">Family</option>
+              <option value="">Friends</option>
+              <option value="">Collegues</option>
+              <option value="">Social</option>
+            </select>
+          </div>
+          <div class="mb-2">
+            <input type="button" value="Create" class="btn btn-success" />
+            <a routerLink="" class="btn btn-warning ms-3">Close</a>
+          </div>
+        </form>
+      <div class="col-lg-4 mt-3">
+       <img height="130px"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        alt="hgjhj"
+      />
+    </div>
+    </div>
+    </div> -->
+  

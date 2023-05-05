@@ -1,0 +1,43 @@
+<!-- <p>Tittle</p>
+<p>Dummy Data</p>
+<div class="row">
+    <div class="col-md-6"><img src="https://www.freeiconspng.com/thumbs/contact-icon-png/contact-icon-20.png" alt=""></div>
+     <div class="col-md-6">
+        <p>Name</p>
+        <p>Email</p>
+        <p>Mobile</p>
+        <p>Company</p>
+        <ul>Group name
+            <li>Family</li>
+            <li>Friends</li>
+            <li>Collegues</li>
+            <li>Social</li>
+        </ul>
+     </div>
+</div> -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-success"><i class="fa-solid fa-user"></i>View Contact Page</h1>
+            <p class="mt-4" style="text-align:justify">Lorem ipsum dolor sit. Odio vrror velit qui culpa reiciendis nostrum vitae consequatur eum ea. Perferendis, veritatis facilis sint minima esse atque dicta minus cupiditate veniam.</p>
+        </div>
+    </div>
+</div>
+<div class="container mt-4 mb-5">
+    <div class="row border p-5 align-items-center">
+        <div class="col-lg-4">
+            <img [src]="contact.photo" width="300px" height="300px" alt="">
+        <br>
+        <a routerLink="" class="btn btn-success mt-2 ms-5"><i class="fa-solid fa-circle-arrow-left p-2"></i>Go Back</a>
+        </div>
+        <div class="col-lg-8">
+            <ul class="list-group">
+                <li class="list-group-item">Name:<strong>{{contact.name}}</strong></li>
+                <li class="list-group-item">Email:<strong>{{contact.email}}</strong></li>
+                <li class="list-group-item">Mobile:<strong>{{contact.mobile}}</strong></li>
+                <li class="list-group-item">Company:<strong>{{contact.company}}</strong></li>
+                <li class="list-group-item">Group:<strong>{{groupName}}</strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
